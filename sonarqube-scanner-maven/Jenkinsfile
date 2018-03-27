@@ -32,20 +32,24 @@ git credentialsId: '9c5600a6-c0d3-4e81-a2b3-cca6d7257abb', url: 'https://github.
      }
    }
      stage('Deploy to Artifactory Repo') {
+        withMaven(jdk: 'JDK-1.8.151', maven: 'Maven-3.5.2')
      }
 
    
     stage('Deploy to Dev') {
+       withMaven(jdk: 'JDK-1.8.151', maven: 'Maven-3.5.2')
       //junit '**/target/surefire-reports/TEST-*.xml'
       //archive 'target/*.jar'
    }
    stage('Smoke Test Execution') {
+      withMaven(jdk: 'JDK-1.8.151', maven: 'Maven-3.5.2')
       //junit '**/target/surefire-reports/TEST-*.xml'
       //archive 'target/*.jar'
    }
 
     
    stage('Smoke Test Execution') {
+      withMaven(jdk: 'JDK-1.8.151', maven: 'Maven-3.5.2')
       //junit '**/target/surefire-reports/TEST-*.xml'
       //archive 'target/*.jar'
     }
